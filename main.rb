@@ -1,3 +1,1 @@
-puts 'Hello world!'  
-
-x
+puts 'Hello world!'
