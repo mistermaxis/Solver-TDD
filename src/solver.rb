@@ -1,24 +1,19 @@
 class Solver
-  def factorial(n)
-    return 1 if n == 0
-    n * factorial(n - 1)
+  def factorial(num)
+    return 1 if num.zero?
+
+    num * factorial(num - 1)
   end
 
   def reverse(word)
     word.reverse
   end
 
-  def fizzbuzz(n)
+  def fizzbuzz(num)
     fb = ''
-    if n % 3 == 0
-      fb.concat('fizz')
-    end
-    if n % 5 == 0
-      fb.concat('buzz')
-    end
-    if fb.empty?
-      fb.concat(n.to_s)
-    end
+    fb.concat('fizz') if (num % 3).zero?
+    fb.concat('buzz') if (num % 5).zero?
+    fb.concat(num.to_s) if fb.empty?
     fb
   end
 end
