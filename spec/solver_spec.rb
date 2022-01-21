@@ -4,6 +4,7 @@ describe Solver do
   solver = Solver.new
   context 'When testing the factorial method' do
     it 'should return the factorial of n' do
+      expect{ solver.factorial(-3) }.to raise_error(RuntimeError, 'Input is negative')
       expect(solver.factorial(0)).to eq 1
       expect(solver.factorial(5)).to eq 120
       expect(solver.factorial(6)).to eq 720
