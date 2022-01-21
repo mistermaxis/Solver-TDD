@@ -1,7 +1,8 @@
 class Solver
   def factorial(num)
-    raise 'Input is negative' if num < 0
+    raise 'Input is negative' if num.negative?
     return 1 if num.zero?
+    
     num * factorial(num - 1)
   end
 
