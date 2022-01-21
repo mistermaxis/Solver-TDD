@@ -9,6 +9,16 @@ class Solver
   end
 
   def fizzbuzz(n)
-    n.to_s
+    fb = ''
+    if n % 3 == 0
+      fb.concat('fizz')
+    end
+    if n % 5 == 0
+      fb.concat('buzz')
+    end
+    if fb.empty?
+      fb.concat(n.to_s)
+    end
+    fb
   end
 end
